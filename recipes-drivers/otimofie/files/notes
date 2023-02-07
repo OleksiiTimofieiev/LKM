@@ -1,0 +1,3 @@
+- sudo mknod /dev/mydevice c 90 0
+- sudo chmod 777 /dev/mydevice
+- dmesg | tail -n 5
