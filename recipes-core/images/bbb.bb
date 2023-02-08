@@ -24,6 +24,8 @@ grep \
 gzip \
 kernel-devicetree \
 kernel-modules \
+kernel-dev \
+kernel-devsrc \
 otimofie \
 i2c-tools \
 packagegroup-core-buildessential \
