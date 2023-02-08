@@ -26,10 +26,11 @@ kernel-devicetree \
 kernel-modules \
 otimofie \
 i2c-tools \
-gcc \
-g++ \
-make \
+packagegroup-core-buildessential \
+nfs-utils \
+nfs-utils-client \
 cmake \
+bash \
 "
 
 IMAGE_LINGUAS = " "
