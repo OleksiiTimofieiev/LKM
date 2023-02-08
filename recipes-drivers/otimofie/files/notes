@@ -2,3 +2,6 @@
 - sudo chmod 777 /dev/mydevice
 - dmesg | tail -n 5
 - echo "test" > /dev/<...>
+
+Yocto configs:
+- PARALLEL_MAKE = "-j 4"
