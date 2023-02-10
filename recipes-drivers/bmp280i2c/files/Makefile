@@ -9,7 +9,7 @@
 # 	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules_install
 
 
-obj-m := bmp280.o
+obj-m := driver-2.o
 
 SRC := $(shell pwd)
 

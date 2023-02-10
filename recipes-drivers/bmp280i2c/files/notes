@@ -1,0 +1,11 @@
+https://embetronicx.com/tutorials/linux/device-drivers/bmp280-i2c-linux-device-driver/
+
+Testing the Device Driver
+- Compile the driver using make all
+- Then load the driver using sudo insmod driver.ko
+- Once the driver is loaded, we can read the driver file using sudo cat /dev/etx_device
+- Now, check the dmesg
+- You should see the pressure value in the kernel log.
+- Unload the driver using sudo rmmod driver
+
+Contains two versions of the driver

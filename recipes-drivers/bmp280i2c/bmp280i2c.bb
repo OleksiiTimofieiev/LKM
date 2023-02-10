@@ -6,7 +6,11 @@ LICENSE = "CLOSED"
 inherit module
 
 SRC_URI = "file://Makefile \
+           file://driver-2.c \
+           file://driver.c \   
            file://bmp280.c \
+           file://bmp280.h \
+           file://bmp280_defs.h \
           "
 
 S = "${WORKDIR}"
@@ -14,7 +18,7 @@ S = "${WORKDIR}"
 # The inherit of module.bbclass will automatically name module packages with
 # "kernel-module-" prefix as required by the oe-core build environment.
 
-RPROVIDES:${PN} += "kernel-module-bmp280"
+RPROVIDES:${PN} += "kernel-module-driver-2"
 
 # python do_display_banner() {
 #     bb.plain("*  otimofie recipe created by bitbake-layers   *");
