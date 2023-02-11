@@ -41,6 +41,8 @@ nfs-utils-client \
 gcc \
 g++ \
 make \
+gdb \
+gdbserver \
 cmake \
 bash \
 usbutils \
@@ -67,6 +69,7 @@ ${LKM} \
 ${USB_WIFI} \
 ${AWS} \
 ${DRIVERS} \
+${UTILS} \
 tests \
 "
 
