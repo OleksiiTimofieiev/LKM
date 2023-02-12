@@ -47,11 +47,21 @@ cmake \
 bash \
 usbutils \
 packagegroup-core-buildessential \
+python3-pip \
 "
 
 AWS = " \
+aws-cli \
+aws-iot-device-client \
+aws-sdk-cpp \
+aws-iot-device-sdk-cpp-v2 \
 aws-iot-device-sdk-python-v2 \
-python3-pip \
+aws-greengrass-core-sdk-c \
+aws-greengrass-core-sdk-python \
+"
+
+FRONTEND = " \
+nginx \
 "
 
 DRIVERS = " \
@@ -59,10 +69,18 @@ i2c-tools \
 bmp280i2c \
 "
 
-IMAGE_INSTALL = " \
-packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} \
+TIME = " \
 chrony \
 chronyc \
+"
+
+TESTS = " \
+tests \
+"
+
+IMAGE_INSTALL = " \
+packagegroup-core-boot ${CORE_IMAGE_EXTRA_INSTALL} \
+${TIME} \
 ${SSH} \
 ${SSL} \
 ${LKM} \
@@ -70,7 +88,8 @@ ${USB_WIFI} \
 ${AWS} \
 ${DRIVERS} \
 ${UTILS} \
-tests \
+${FRONTEND} \
+${TESTS} \
 "
 
 IMAGE_LINGUAS = " "
