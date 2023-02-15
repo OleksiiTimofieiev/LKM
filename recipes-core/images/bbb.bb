@@ -100,13 +100,5 @@ LICENSE = "MIT"
 
 inherit core-image
 
-inherit extrausers
-EXTRA_USERS_PARAMS = "usermod -P password root;"
-
-IMAGE_FEATURES:remove = " \
-debug-tweaks \
-empty-root-password \
-"
-
 IMAGE_ROOTFS_SIZE ?= "8192"
 IMAGE_ROOTFS_EXTRA_SPACE:append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "", d)}"
