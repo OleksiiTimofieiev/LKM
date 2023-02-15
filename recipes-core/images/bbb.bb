@@ -104,6 +104,7 @@ PASSWD = "$6$mypassword$NwLLiNQW.65TFq4VWHBHlSzH48fAdqjlPK5bilGX.1j00kHoBJ5VO6GF
 
 EXTRA_USERS_PARAMS = "\
     usermod -p '${PASSWD}' root; \
+    useradd -p '' dev; \
 "
 
 IMAGE_ROOTFS_SIZE ?= "8192"
