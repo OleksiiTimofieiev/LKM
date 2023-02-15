@@ -98,8 +98,7 @@ IMAGE_FSTYPES = "wic"
 
 LICENSE = "MIT"
 
-inherit core-image extrausers
-EXTRA_USERS_PARAMS += "usermod -p 'pass' root;"
+
 
 
 IMAGE_ROOTFS_SIZE ?= "8192"
