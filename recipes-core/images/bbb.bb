@@ -100,6 +100,10 @@ LICENSE = "MIT"
 
 inherit core-image
 
+IMAGE_FEATURES:remove += " \
+debug-tweaks \
+"
+
 INHERIT += "extrausers"
 EXTRA_USERS_PARAMS = "usermod -P pass root;"
 
