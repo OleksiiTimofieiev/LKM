@@ -102,3 +102,13 @@ inherit core-image
 
 IMAGE_ROOTFS_SIZE ?= "8192"
 IMAGE_ROOTFS_EXTRA_SPACE:append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "", d)}"
+
+ROOT_PASSWD = "root"
+ROOTFS_POSTPROCESS_COMMAND += "set_root_password; "
+
+set_root_password () {
+local p=$(openssl passwd -1 -salt "My salt" "${ROOT_PASSWD}")
+sed -e "s/root:[^:]*:/root:${p}:/" -i ${IMAGE_ROOTFS}/etc/shadow
+}
+
+
