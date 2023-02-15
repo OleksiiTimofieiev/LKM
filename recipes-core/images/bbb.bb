@@ -100,6 +100,9 @@ LICENSE = "MIT"
 
 inherit core-image
 
+inherit extrausers
+EXTRA_USERS_PARAMS = "usermod -P password root;"
+
 IMAGE_FEATURES:remove = " \
 debug-tweaks \
 empty-root-password \
