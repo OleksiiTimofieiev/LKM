@@ -100,7 +100,7 @@ LICENSE = "MIT"
 
 inherit core-image
 
-IMAGE_FEATURES:remove += " \
+IMAGE_FEATURES:remove = " \
 debug-tweaks \
 "
 
