@@ -100,12 +100,10 @@ LICENSE = "MIT"
 
 inherit core-image extrausers
 
-PASSWD = "5ANc0UC0Pi/8I"
+PASSWD = "HR2cQ67uSrFZk"
 
 EXTRA_USERS_PARAMS = "\
     usermod -p '${PASSWD}' root; \
-    useradd -p '${PASSWD}' dev; \
-    useradd -p '' test; \
 "
 
 IMAGE_ROOTFS_SIZE ?= "8192"
