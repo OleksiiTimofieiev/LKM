@@ -105,8 +105,5 @@ debug-tweaks \
 empty-root-password \
 "
 
-INHERIT += "extrausers"
-EXTRA_USERS_PARAMS = "usermod -P pass root;"
-
 IMAGE_ROOTFS_SIZE ?= "8192"
 IMAGE_ROOTFS_EXTRA_SPACE:append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "", d)}"
