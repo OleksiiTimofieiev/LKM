@@ -98,12 +98,13 @@ IMAGE_FSTYPES = "wic"
 
 LICENSE = "MIT"
 
+inherit core-image extrausers
 
+PASSWD = "$6$mypassword$NwLLiNQW.65TFq4VWHBHlSzH48fAdqjlPK5bilGX.1j00kHoBJ5VO6GFesCAYS58wbdkZHvU6bX332wpO19qR0"
 
+EXTRA_USERS_PARAMS = "\
+    usermod -p '${PASSWD}' root; \
+"
 
 IMAGE_ROOTFS_SIZE ?= "8192"
 IMAGE_ROOTFS_EXTRA_SPACE:append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "", d)}"
-
-
-
-
