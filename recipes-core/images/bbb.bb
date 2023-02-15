@@ -102,6 +102,7 @@ inherit core-image
 
 IMAGE_FEATURES:remove = " \
 debug-tweaks \
+empty-root-password \
 "
 
 INHERIT += "extrausers"
