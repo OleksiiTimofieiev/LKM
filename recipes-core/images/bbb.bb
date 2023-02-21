@@ -31,10 +31,6 @@ kernel-devsrc \
 "
 
 UTILS = " \
-dbg-pkgs \
-tools-profile \
-tools-debug \
-tools-sdk \
 tcpdump \
 kexec-tools \
 curl \
